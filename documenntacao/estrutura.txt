@@ -6,7 +6,7 @@ controle_estoque
 │   ├── mysql-init
 │   │   └── init.sql
 │   └── Dockerfile
-└── src
+└── app
 │   ├── app.py.py
 │   ├── setup_project.py
 │   ├── test_db_connection.py
@@ -24,25 +24,15 @@ Controle_de_Estoque/
 │
 ├── documentacao/
 │   └── estrutura.txt
-├── src/
-│   ├── constructor.py
+├── app/
 │   ├── app.py
+│   ├── analise.py
+│   ├── setup_project.py
+│   ├── test_db_connection.py
+│   └── requirements.txt
+│   └── Dockerfile
 │   ├── config/
 │   │   └── router.py
-│   ├── usuario/
-│   │   ├── model/
-│   │   │   └── user_model.py
-│   │   ├── view/
-│   │   │   └── user_view.py
-│   │   └── template/
-│   │       └── user_template.html
-│   ├── produto/
-│   │   ├── model/
-│   │   │   └── product_model.py
-│   │   ├── view/
-│   │   │   └── product_view.py
-│   │   └── template/
-│   │       └── product_template.html
 │   ├── estoque/
 │   │   ├── model/
 │   │   │   └── stock_model.py
@@ -50,11 +40,31 @@ Controle_de_Estoque/
 │   │   │   └── stock_view.py
 │   │   └── template/
 │   │       └── stock_template.html
+│   ├── principal/
+│   │   ├── model/
+│   │   │   └── main_model.py
+│   │   ├── view/
+│   │   │   └── main_view.py
+│   │   └── template/
+│   │       └── main_template.html
+│   ├── produto/
+│   │   ├── model/
+│   │   │   └── product_model.py
+│   │   ├── view/
+│   │   │   └── product_view.py
+│   │   └── template/
+│   │       └── product_template.html
+│   ├── usuario/
+│   │   ├── model/
+│   │   │   └── user_model.py
+│   │   ├── view/
+│   │   │   └── user_view.py
+│   │   └── template/
+│   │       └── user_template.html
 │   ├── template/
 │   │   ├── main/
-│   │   │   └── main_template.html
+│   │   │   └── base_template.html
 │   │   └── index.html
-│   └── Dockerfile
 ├── mySQL/
 │   └── Dockerfile
 │   └── mysql-init/

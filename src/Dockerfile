@@ -10,9 +10,11 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /app
+COPY requirements.txt /app/
 
 RUN pip install --upgrade pip
-RUN pip install -r /app/requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /app
 
 CMD ["flask", "run", "--host=0.0.0.0"]

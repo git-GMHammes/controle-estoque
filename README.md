@@ -12,6 +12,7 @@ docker-compose up --build -d
 ```sh
 docker exec -it estoque-flask ls /app
 docker exec -it estoque-flask python /app/setup_project.py
+docker exec -it estoque-flask python /app/analise.py
 ```
 
 ### Teste do ORM SQLAlchemy:
@@ -34,10 +35,22 @@ docker-compose exec flask-src flask db migrate -m "Create products table"
 docker-compose exec flask-src flask db upgrade
 ```
 
-### Combo de comandos:
+### 1º Combo de Limpeza e construção:
 
 ```sh
 docker-compose down -v 
 docker-compose build --no-cache
 docker-compose up --build -d 
+``` 
+
+### 2º Combo de Limpeza e construção:
+
+```sh
+docker stop $(docker ps -aq)
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images -q)
+docker volume prune -f
+docker volume rm devopsteste_db-data -f
+docker network prune -f
+docker system prune -a
 ``` 

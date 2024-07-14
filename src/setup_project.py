@@ -20,6 +20,7 @@ def create_file(path, content=""):
 # Estrutura de diretórios e arquivos para criar
 directories = [
     "config",
+    "principal/model", "principal/view", "principal/template",
     "usuario/model", "usuario/view", "usuario/template",
     "produto/model", "produto/view", "produto/template",
     "estoque/model", "estoque/view", "estoque/template",
@@ -33,6 +34,9 @@ files = {
     "usuario/model/user_model.py": "",
     "usuario/view/user_view.py": "",
     "usuario/template/user_template.html": "",
+    "principal/model/main_model.py": "",
+    "principal/view/main_view.py": "",
+    "principal/template/main_template.html": "",
     "produto/model/product_model.py": "",
     "produto/view/product_view.py": "",
     "produto/template/product_template.html": "",
