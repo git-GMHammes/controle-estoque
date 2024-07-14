@@ -1,4 +1,4 @@
-# Titulo do Projeto - Estoque de Produtos
+# Controle de Estoque
 
 ## Criqação de um projeto Flask com Docker:
 
