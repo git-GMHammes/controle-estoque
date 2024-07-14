@@ -24,7 +24,7 @@ directories = [
     "usuario/model", "usuario/view", "usuario/template",
     "produto/model", "produto/view", "produto/template",
     "estoque/model", "estoque/view", "estoque/template",
-    "template/main"
+    "templates/main"
 ]
 
 files = {
@@ -43,8 +43,8 @@ files = {
     "estoque/model/stock_model.py": "",
     "estoque/view/stock_view.py": "",
     "estoque/template/stock_template.html": "",
-    "template/main/main_template.html": "",
-    "template/index.html": ""  # Arquivo index.html adicionado conforme solicitado
+    "templates/main/base_template.html": "",
+    "templates/index.html": ""
 }
 
 # Caminho base onde os diretórios e arquivos devem ser criados
