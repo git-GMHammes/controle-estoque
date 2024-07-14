@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  flask-src:
+    build: ./src
+    container_name: estoque-flask
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=pass123
+      - MYSQL_DB=db
+      - MYSQL_HOST=mysql-db
+    volumes:
+      - ./src:/app
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    build: ./mysql
+    container_name: estoque-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass123
+      MYSQL_DATABASE: db
+    ports:
+      - "3350:3306"
+    volumes:
+      - ./mysql/mysql-init:/docker-entrypoint-initdb.d

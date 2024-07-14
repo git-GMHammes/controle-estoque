@@ -1,0 +1,63 @@
+controle_estoque
+├── documentacao
+│   └── estrutura.txt
+│   └── comandos.txt
+├── mysql
+│   ├── mysql-init
+│   │   └── init.sql
+│   └── Dockerfile
+└── src
+│   ├── app.py.py
+│   ├── setup_project.py
+│   ├── test_db_connection.py
+│   ├── testeSQLAlchemy.py
+│   ├── test_db_connection.py
+│   ├── Dockerfile
+│   └── requirements.txt
+└── docker-compose.yml
+
+
+
+ESTRUTURA que DEVE SER IGNODARA
+
+Controle_de_Estoque/
+│
+├── documentacao/
+│   └── estrutura.txt
+├── src/
+│   ├── constructor.py
+│   ├── app.py
+│   ├── config/
+│   │   └── router.py
+│   ├── usuario/
+│   │   ├── model/
+│   │   │   └── user_model.py
+│   │   ├── view/
+│   │   │   └── user_view.py
+│   │   └── template/
+│   │       └── user_template.html
+│   ├── produto/
+│   │   ├── model/
+│   │   │   └── product_model.py
+│   │   ├── view/
+│   │   │   └── product_view.py
+│   │   └── template/
+│   │       └── product_template.html
+│   ├── estoque/
+│   │   ├── model/
+│   │   │   └── stock_model.py
+│   │   ├── view/
+│   │   │   └── stock_view.py
+│   │   └── template/
+│   │       └── stock_template.html
+│   ├── template/
+│   │   ├── main/
+│   │   │   └── main_template.html
+│   │   └── index.html
+│   └── Dockerfile
+├── mySQL/
+│   └── Dockerfile
+│   └── mysql-init/
+│       └── init.sql
+│
+└── docker-compose.yml
