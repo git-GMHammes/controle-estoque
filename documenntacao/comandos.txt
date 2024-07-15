@@ -1,8 +1,7 @@
 Titulo do Projeto - Estoque de Produtos
 
-Reiniciar o Flask:
-
-docker exec -it estoque-flask python /app/app.py
+Logs do container:
+docker logs -f estoque-flask
 
 Criação de estrutura de diretórios:
 

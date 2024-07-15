@@ -14,8 +14,14 @@ services:
       - MYSQL_HOST=mysql-db
     volumes:
       - ./src:/app
+      - ./src/logs:/app/logs
     depends_on:
       - mysql-db
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"
 
   mysql-db:
     build: ./mysql
@@ -28,3 +34,8 @@ services:
       - "3350:3306"
     volumes:
       - ./mysql/mysql-init:/docker-entrypoint-initdb.d
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"

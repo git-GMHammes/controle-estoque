@@ -1,15 +1,17 @@
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+import logging
+from flask import Flask
 from config.router import router
+from estoque.views.stock_view import estoque_bp
 
-app = Flask(__name__, template_folder='templates')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pass123@mysql-db/db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Configuração global do logger para gravar no diretório de logs
+logging.basicConfig(level=logging.DEBUG, filename='/app/logs/app.log', filemode='w',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-db = SQLAlchemy(app)
+app = Flask(__name__)
 
-# Registrar o Blueprint das rotas
+# Registrar os Blueprints
 app.register_blueprint(router)
+app.register_blueprint(estoque_bp, url_prefix='/estoque')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

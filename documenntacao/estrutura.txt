@@ -1,25 +1,4 @@
-controle_estoque
-├── documentacao
-│   └── estrutura.txt
-│   └── comandos.txt
-├── mysql
-│   ├── mysql-init
-│   │   └── init.sql
-│   └── Dockerfile
-└── app
-│   ├── app.py.py
-│   ├── setup_project.py
-│   ├── test_db_connection.py
-│   ├── testeSQLAlchemy.py
-│   ├── test_db_connection.py
-│   ├── Dockerfile
-│   └── requirements.txt
-└── docker-compose.yml
-
-
-
-ESTRUTURA que DEVE SER IGNODARA
-
+Estrutura no Host: 
 Controle_de_Estoque/
 │
 ├── documentacao/
@@ -78,3 +57,53 @@ Controle_de_Estoque/
 │       └── init.sql
 │
 └── docker-compose.yml
+
+Estrutura no Container: 
+├── app/
+│   ├── app.py
+│   ├── analise.py
+│   ├── setup_project.py
+│   ├── test_db_connection.py
+│   └── requirements.txt
+│   └── Dockerfile
+│   ├── config/
+│   │   └── router.py
+│   ├── estoque/
+│   │   ├── models/
+│   │   │   └── stock_model.py
+│   │   ├── views/
+│   │   │   └── stock_view.py
+│   │   ├── templates/
+│   │   │   └── stock_template.html
+│   ├── principal/
+│   │   ├── models/
+│   │   │   └── main_model.py
+│   │   ├── views/
+│   │   │   └── main_view.py
+│   │   ├── templates/
+│   │   │   └── main_template.html
+│   ├── produto/
+│   │   ├── models/
+│   │   │   └── product_model.py
+│   │   ├── views/
+│   │   │   └── product_view.py
+│   │   ├── templates/
+│   │   │   └── product_view.html
+│   ├── usuario/
+│   │   ├── models/
+│   │   │   └── user_model.py
+│   │   ├── views/
+│   │   │   └── user_view.py
+│   │   ├── templates/
+│   │   │   └── user_template.html
+│   ├── templates/
+│   │   ├── base_template.html
+│   │   ├── estoque/
+│   │   │   └── stock_template.html
+│   │   ├── principal/
+│   │   │   └── main_template.html
+│   │   ├── produto/
+│   │   │   └── product_view.html
+│   │   ├── usuario/
+│   │   │   └── user_template.html
+│   │   └── index.html
