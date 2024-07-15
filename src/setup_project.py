@@ -20,10 +20,10 @@ def create_file(path, content=""):
 # Estrutura de diretórios e arquivos para criar
 directories = [
     "config",
-    "principal/model", "principal/view", "principal/template",
-    "usuario/model", "usuario/view", "usuario/template",
-    "produto/model", "produto/view", "produto/template",
-    "estoque/model", "estoque/view", "estoque/template",
+    "principal/model", "principal/view", "principal/templates",
+    "usuario/model", "usuario/view", "usuario/templates",
+    "produto/model", "produto/view", "produto/templates",
+    "estoque/model", "estoque/view", "estoque/templates",
     "templates/main"
 ]
 
@@ -33,16 +33,16 @@ files = {
     "config/router.py": "",
     "usuario/model/user_model.py": "",
     "usuario/view/user_view.py": "",
-    "usuario/template/user_template.html": "",
+    "usuario/templates/user_template.html": "",
     "principal/model/main_model.py": "",
     "principal/view/main_view.py": "",
-    "principal/template/main_template.html": "",
+    "principal/templates/main_template.html": "",
     "produto/model/product_model.py": "",
     "produto/view/product_view.py": "",
-    "produto/template/product_template.html": "",
+    "produto/templates/product_template.html": "",
     "estoque/model/stock_model.py": "",
     "estoque/view/stock_view.py": "",
-    "estoque/template/stock_template.html": "",
+    "estoque/templates/stock_template.html": "",
     "templates/main/base_template.html": "",
     "templates/index.html": ""
 }

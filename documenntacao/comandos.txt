@@ -1,7 +1,8 @@
 Titulo do Projeto - Estoque de Produtos
 
-Criqação de um projeto Flask com Docker:
+Reiniciar o Flask:
 
+docker exec -it estoque-flask python /app/app.py
 
 Criação de estrutura de diretórios:
 

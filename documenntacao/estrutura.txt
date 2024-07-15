@@ -34,36 +34,43 @@ Controle_de_Estoque/
 │   ├── config/
 │   │   └── router.py
 │   ├── estoque/
-│   │   ├── model/
+│   │   ├── models/
 │   │   │   └── stock_model.py
-│   │   ├── view/
+│   │   ├── views/
 │   │   │   └── stock_view.py
-│   │   └── template/
-│   │       └── stock_template.html
+│   │   ├── templates/
+│   │   │   └── stock_template.html
 │   ├── principal/
-│   │   ├── model/
+│   │   ├── models/
 │   │   │   └── main_model.py
-│   │   ├── view/
+│   │   ├── views/
 │   │   │   └── main_view.py
-│   │   └── template/
-│   │       └── main_template.html
+│   │   ├── templates/
+│   │   │   └── main_template.html
 │   ├── produto/
-│   │   ├── model/
+│   │   ├── models/
 │   │   │   └── product_model.py
-│   │   ├── view/
+│   │   ├── views/
 │   │   │   └── product_view.py
-│   │   └── template/
-│   │       └── product_template.html
+│   │   ├── templates/
+│   │   │   └── product_view.html
 │   ├── usuario/
-│   │   ├── model/
+│   │   ├── models/
 │   │   │   └── user_model.py
-│   │   ├── view/
+│   │   ├── views/
 │   │   │   └── user_view.py
-│   │   └── template/
-│   │       └── user_template.html
-│   ├── template/
-│   │   ├── main/
-│   │   │   └── base_template.html
+│   │   ├── templates/
+│   │   │   └── user_template.html
+│   ├── templates/
+│   │   ├── base_template.html
+│   │   ├── estoque/
+│   │   │   └── stock_template.html
+│   │   ├── principal/
+│   │   │   └── main_template.html
+│   │   ├── produto/
+│   │   │   └── product_view.html
+│   │   ├── usuario/
+│   │   │   └── user_template.html
 │   │   └── index.html
 ├── mySQL/
 │   └── Dockerfile
